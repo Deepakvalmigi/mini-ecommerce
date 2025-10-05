@@ -1,12 +1,13 @@
 import { products } from '@/lib/products';
 import ProductCard from '@/components/ProductCard';
 import Hero from '@/components/Hero';
+import Faq from '@/components/Faq';
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <div className="container mx-auto px-4 py-8 sm:py-12">
+      <div id="products" className="container mx-auto px-4 py-8 sm:py-12">
         <h1 className="mb-8 text-center text-3xl font-bold tracking-tight text-foreground sm:mb-12 sm:text-4xl font-headline">
           Explore Our Products
         </h1>
@@ -16,6 +17,7 @@ export default function Home() {
           ))}
         </div>
       </div>
+      <Faq />
     </>
   );
 }
