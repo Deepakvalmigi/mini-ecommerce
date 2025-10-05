@@ -1,9 +1,9 @@
 import './globals.css';
-import { cn } from '@/lib/utils';
-import { Toaster } from '@/components/ui/toaster';
-import { CartProvider } from '@/context/CartContext';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { cn } from '../lib/utils';
+import { Toaster } from '../components/ui/toaster';
+import { CartProvider } from '../context/CartContext';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'ShopSphere',
