@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "1",
+      "description": "Vintage Leather Wallet",
+      "imageUrl": "https://images.unsplash.com/photo-1612023395494-1c4050b68647?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsZWF0aGVyJTIwd2FsbGV0fGVufDB8fHx8MTc1OTU2MzQwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather wallet"
+    },
+    {
+      "id": "2",
+      "description": "Wireless Bluetooth Headphones",
+      "imageUrl": "https://images.unsplash.com/photo-1615106318886-11a94453d073?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxibHVldG9vdGglMjBoZWFkcGhvbmVzfGVufDB8fHx8MTc1OTY2NTI3NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bluetooth headphones"
+    },
+    {
+      "id": "3",
+      "description": "Minimalist Wrist Watch",
+      "imageUrl": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3cmlzdCUyMHdhdGNofGVufDB8fHx8MTc1OTY1NDk4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wrist watch"
+    },
+    {
+      "id": "4",
+      "description": "Scented Soy Candle",
+      "imageUrl": "https://images.unsplash.com/photo-1603006905003-be475563bc59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzY2VudGVkJTIwY2FuZGxlfGVufDB8fHx8MTc1OTY0NDM5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "scented candle"
+    },
+    {
+      "id": "5",
+      "description": "Gourmet Coffee Beans",
+      "imageUrl": "https://images.unsplash.com/photo-1692296113053-76f240e5ce33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8fDE3NTk2MzUzNTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee beans"
+    },
+    {
+      "id": "6",
+      "description": "Insulated Water Bottle",
+      "imageUrl": "https://images.unsplash.com/photo-1530711654140-23ef9ad45094?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3YXRlciUyMGJvdHRsZXxlbnwwfHx8fDE3NTk1NjM0MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "water bottle"
+    }
+  ]
 }
