@@ -1,6 +1,6 @@
-import { products } from '@/lib/products';
-import ProductCard from '@/components/ProductCard';
-import Hero from '@/components/Hero';
+import { products } from '../lib/products';
+import ProductCard from '../components/ProductCard';
+import Hero from '../components/Hero';
 import Faq from '../components/Faq';
 
 export default function Home() {

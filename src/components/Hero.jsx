@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { Button } from './ui/button';
 import { ShoppingBag } from 'lucide-react';
 
 export default function Hero() {
