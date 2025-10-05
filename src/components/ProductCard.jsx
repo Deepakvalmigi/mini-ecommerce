@@ -4,15 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { PlusCircle } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { useCart } from "@/hooks/useCart";
+} from "./ui/card";
+import { useCart } from "../hooks/useCart";
 
 export default function ProductCard({ product }) {
   const { addToCart } = useCart();
