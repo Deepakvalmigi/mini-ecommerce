@@ -1,15 +1,20 @@
 import { products } from '@/lib/products';
 import ProductDetailsClient from '@/components/ProductDetailsClient';
 import { notFound } from 'next/navigation';
+import type { Metadata, ResolvingMetadata } from 'next'
 
-const getProduct = (id) => {
+type Props = {
+  params: { id: string }
+}
+
+const getProduct = (id: string) => {
     return products.find(p => p.id === id);
 }
 
 export async function generateMetadata(
-  { params },
-  parent
-) {
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const product = getProduct(params.id);
   const previousTitle = (await parent).title?.absolute || 'ShopSphere';
 
@@ -25,7 +30,7 @@ export async function generateMetadata(
   };
 }
 
-export default function ProductPage({ params }) {
+export default function ProductPage({ params }: Props) {
   const product = getProduct(params.id);
 
   if (!product) {

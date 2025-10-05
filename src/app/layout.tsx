@@ -1,17 +1,21 @@
 import './globals.css';
-import { cn } from '../lib/utils';
-import { Toaster } from '../components/ui/toaster';
-import { CartProvider } from '../context/CartContext';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { cn } from '@/lib/utils';
+import { Toaster } from '@/components/ui/toaster';
+import { CartProvider } from '@/context/CartContext';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'ShopSphere',
   description: 'A mini e-commerce experience created with Next.js',
 };
 
 export default function RootLayout({
   children,
+}: {
+  children: ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>

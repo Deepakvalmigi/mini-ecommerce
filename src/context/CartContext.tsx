@@ -1,15 +1,35 @@
 "use client";
 
 import { useToast } from "@/hooks/use-toast";
-import React, { createContext, useReducer, useEffect } from "react";
+import React, { createContext, useReducer, useEffect, ReactNode } from "react";
+import type { CartItem, Product } from "@/types";
 
-const initialState = {
+type State = {
+  cartItems: CartItem[];
+};
+
+type Action =
+  | { type: "ADD_ITEM"; payload: Product }
+  | { type: "REMOVE_ITEM"; payload: { id: string } }
+  | { type: "UPDATE_QUANTITY"; payload: { id: string; quantity: number } }
+  | { type: "SET_STATE"; payload: State };
+
+const initialState: State = {
   cartItems: [],
 };
 
-export const CartContext = createContext(undefined);
+type CartContextType = {
+  state: State;
+  addToCart: (product: Product) => void;
+  removeFromCart: (id: string) => void;
+  updateQuantity: (id: string, quantity: number) => void;
+  itemCount: number;
+  total: number;
+};
 
-const cartReducer = (state, action) => {
+export const CartContext = createContext<CartContextType | undefined>(undefined);
+
+const cartReducer = (state: State, action: Action): State => {
   switch (action.type) {
     case "ADD_ITEM": {
       const existingItem = state.cartItems.find(
@@ -55,7 +75,7 @@ const cartReducer = (state, action) => {
   }
 };
 
-export const CartProvider = ({ children }) => {
+export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
   const { toast } = useToast();
 
@@ -78,7 +98,7 @@ export const CartProvider = ({ children }) => {
     }
   }, [state]);
 
-  const addToCart = (product) => {
+  const addToCart = (product: Product) => {
     dispatch({ type: "ADD_ITEM", payload: product });
     toast({
       title: "Added to cart",
@@ -86,11 +106,11 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  const removeFromCart = (id) => {
+  const removeFromCart = (id: string) => {
     dispatch({ type: "REMOVE_ITEM", payload: { id } });
   };
 
-  const updateQuantity = (id, quantity) => {
+  const updateQuantity = (id: string, quantity: number) => {
     dispatch({ type: "UPDATE_QUANTITY", payload: { id, quantity } });
   };
 

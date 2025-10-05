@@ -18,7 +18,7 @@ import { Separator } from "@/components/ui/separator";
 export default function CartPage() {
   const { state, updateQuantity, removeFromCart, total } = useCart();
 
-  const formatPrice = (price) => {
+  const formatPrice = (price: number) => {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",

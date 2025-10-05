@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { ShoppingCart, Package } from "lucide-react";
-import { useCart } from "../hooks/useCart";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
+import { useCart } from "@/hooks/useCart";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export default function Header() {
   const { itemCount } = useCart();

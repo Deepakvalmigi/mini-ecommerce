@@ -5,11 +5,12 @@ import { PlusCircle } from "lucide-react";
 
 import { useCart } from "@/hooks/useCart";
 import { Button } from "@/components/ui/button";
+import type { Product } from "@/types";
 
-export default function ProductDetailsClient({ product }) {
+export default function ProductDetailsClient({ product }: { product: Product }) {
   const { addToCart } = useCart();
 
-  const formatPrice = (price) => {
+  const formatPrice = (price: number) => {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",

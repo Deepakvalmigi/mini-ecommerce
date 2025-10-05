@@ -3,21 +3,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PlusCircle } from "lucide-react";
+import type { Product } from "@/types";
 
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { useCart } from "../hooks/useCart";
+} from "@/components/ui/card";
+import { useCart } from "@/hooks/useCart";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product }: { product: Product }) {
   const { addToCart } = useCart();
 
-  const formatPrice = (price) => {
+  const formatPrice = (price: number) => {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
