@@ -1,3 +1,4 @@
+import { products } from "@/lib/products";
 import { NextResponse } from "next/server";
 
 export async function GET(
@@ -5,9 +6,11 @@ export async function GET(
   context: { params: { id: string } }
 ) {
   const { id } = context.params;
+  const product = products.find((p) => p.id === id);
 
-  // Example logic – adjust to your own data source
-  const product = { id, name: "Sample Product", price: 100 };
+  if (!product) {
+    return NextResponse.json({ error: "Product not found" }, { status: 404 });
+  }
 
   return NextResponse.json(product);
 }
